@@ -13,6 +13,12 @@
 		4FEA4DCD1D96F158003808D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA4DCC1D96F158003808D6 /* Assets.xcassets */; };
 		4FEA4DD01D96F158003808D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA4DCE1D96F158003808D6 /* LaunchScreen.storyboard */; };
 		4FEA4DD81D9712F6003808D6 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA4DD71D9712F6003808D6 /* pokemon.csv */; };
+		4FEA4DDB1D9714AC003808D6 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA4DDA1D9714AC003808D6 /* Pokemon.swift */; };
+		4FEA4DDE1D98241C003808D6 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA4DDD1D98241C003808D6 /* PokeCell.swift */; };
+		4FEA4DE01D98960C003808D6 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA4DDF1D98960C003808D6 /* csv.swift */; };
+		4FEA4DE21D989F41003808D6 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA4DE11D989F41003808D6 /* pokemon.ttf */; };
+		4FEA4DE71D98A5E3003808D6 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA4DE61D98A5E2003808D6 /* music.png */; };
+		4FEA4DE91D98A60F003808D6 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA4DE81D98A60F003808D6 /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		4FEA4DCF1D96F158003808D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FEA4DD11D96F158003808D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FEA4DD71D9712F6003808D6 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		4FEA4DDA1D9714AC003808D6 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		4FEA4DDD1D98241C003808D6 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		4FEA4DDF1D98960C003808D6 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		4FEA4DE11D989F41003808D6 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
+		4FEA4DE61D98A5E2003808D6 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		4FEA4DE81D98A60F003808D6 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,61 @@
 		4FEA4DC41D96F158003808D6 /* pokedex3 */ = {
 			isa = PBXGroup;
 			children = (
+				4FEA4DD91D971493003808D6 /* Model */,
+				4FEA4DDC1D9823EE003808D6 /* View */,
+				4FEA4DE31D989F79003808D6 /* Controller */,
+				4FEA4DE41D989F94003808D6 /* Resources */,
+				4FEA4DE51D989FA4003808D6 /* Utilities */,
 				4FEA4DC51D96F158003808D6 /* AppDelegate.swift */,
-				4FEA4DC71D96F158003808D6 /* ViewController.swift */,
 				4FEA4DC91D96F158003808D6 /* Main.storyboard */,
 				4FEA4DCC1D96F158003808D6 /* Assets.xcassets */,
-				4FEA4DD71D9712F6003808D6 /* pokemon.csv */,
 				4FEA4DCE1D96F158003808D6 /* LaunchScreen.storyboard */,
 				4FEA4DD11D96F158003808D6 /* Info.plist */,
 			);
 			path = pokedex3;
+			sourceTree = "<group>";
+		};
+		4FEA4DD91D971493003808D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FEA4DDA1D9714AC003808D6 /* Pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4FEA4DDC1D9823EE003808D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FEA4DDD1D98241C003808D6 /* PokeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4FEA4DE31D989F79003808D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FEA4DC71D96F158003808D6 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4FEA4DE41D989F94003808D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FEA4DD71D9712F6003808D6 /* pokemon.csv */,
+				4FEA4DE11D989F41003808D6 /* pokemon.ttf */,
+				4FEA4DE61D98A5E2003808D6 /* music.png */,
+				4FEA4DE81D98A60F003808D6 /* music.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4FEA4DE51D989FA4003808D6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4FEA4DDF1D98960C003808D6 /* csv.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +158,7 @@
 					4FEA4DC11D96F158003808D6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = V7Q65FMKJ4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,10 +186,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FEA4DE21D989F41003808D6 /* pokemon.ttf in Resources */,
 				4FEA4DD01D96F158003808D6 /* LaunchScreen.storyboard in Resources */,
 				4FEA4DCD1D96F158003808D6 /* Assets.xcassets in Resources */,
 				4FEA4DD81D9712F6003808D6 /* pokemon.csv in Resources */,
 				4FEA4DCB1D96F158003808D6 /* Main.storyboard in Resources */,
+				4FEA4DE91D98A60F003808D6 /* music.mp3 in Resources */,
+				4FEA4DE71D98A5E3003808D6 /* music.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FEA4DDE1D98241C003808D6 /* PokeCell.swift in Sources */,
 				4FEA4DC81D96F158003808D6 /* ViewController.swift in Sources */,
 				4FEA4DC61D96F158003808D6 /* AppDelegate.swift in Sources */,
+				4FEA4DDB1D9714AC003808D6 /* Pokemon.swift in Sources */,
+				4FEA4DE01D98960C003808D6 /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
