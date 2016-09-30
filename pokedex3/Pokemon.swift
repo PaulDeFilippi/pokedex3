@@ -154,6 +154,36 @@ class Pokemon {
                 print(self._attack)
                 print(self._defense)
                 
+                if let types = dict["types"] as? [Dictionary<String, String>] , types.count > 0 {
+                    
+                    // above line of code shows how we dive into the data in the API to extract the "types" dictionary as a key of type String and an object of type String.  In this particular API we are mostly extracting info as arrays inside of dictionaries as you can see by the above []
+                    
+                    if let name = types[0]["name"] {
+                        
+                        self._type = name.capitalized
+                    }
+                    
+                    // code below - the for loop - instantiated for Pokemon with more than 1 type
+                    
+                    if types.count > 1 {
+                        
+                        for x in 1..<types.count {
+                            
+                            if let name = types[x]["name"] {
+                                
+                                self._type! += "/\(name.capitalized)"
+                            }
+                        }
+                    }
+                    
+                    print(self._type)
+                    // above line prints types to the console
+                    
+                } else {
+                    
+                    self._type = ""
+                }
+                
             }
             
             completed()
