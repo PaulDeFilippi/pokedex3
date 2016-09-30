@@ -15,7 +15,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
     var inSearchMode = false
@@ -72,11 +71,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 pokemon.append(poke)
             }
             
-            
         } catch let err as NSError {
             
             print(err.debugDescription)
+            
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -158,7 +158,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             sender.alpha = 1.0
         }
         
-        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -183,8 +182,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil})
             collection.reloadData()
             
-            
         }
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -196,7 +195,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     }
-    
     
 }
 

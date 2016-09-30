@@ -37,14 +37,7 @@ class PokemonDetailVC: UIViewController {
         pokedexLbl.text = "\(pokemon.pokedexId)"
         pokemon.downloadPokemonDetail {
             
-            // Only called after the network call is complete
-            
-            
-            // print used below to show that we did arrive inside the function
-            print("Did arrive here?")
             self.updateUI()
-            
-            // now that we are arriving inside the downloadPokemonDetail function we can start updating the UI.  We are getting the data in the right place and can start updating labels
             
         }
     
@@ -80,5 +73,4 @@ class PokemonDetailVC: UIViewController {
         
     }
     
-
 }

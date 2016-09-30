@@ -11,7 +11,6 @@ import Alamofire
 
 class Pokemon {
     
-    // properties
     fileprivate var _name: String!
     fileprivate var _pokedexId: Int!
     private var _description: String!
@@ -25,8 +24,6 @@ class Pokemon {
     private var _nextEvolutionId: String!
     private var _nextEvolutionLevel: String!
     private var _pokemonURL: String!
-    
-    // getters
     
     var nextEvolutionLevel: String {
         
@@ -138,7 +135,6 @@ class Pokemon {
         return _pokedexId
     }
     
-    // initializer
     init(name: String, pokedexId: Int) {
         
         self._name = name
@@ -152,16 +148,12 @@ class Pokemon {
         
         Alamofire.request(_pokemonURL, method: .get).responseJSON { (response) in
             
-            // print(response.result.value)
-            // above print function allows us to test whether or not Alamofire is able to pull in the JSON from the poke API
-            
             if let dict = response.result.value as? Dictionary<String, Any> {
-                
-                // above - we are letting dict equal the Dictionary that is being pulled in with the request sent through Alamofire
                 
                 if let weight = dict["weight"] as? String {
                     
                     self._weight = weight
+                    
                 }
                 
                 if let height = dict["height"] as? String {
@@ -182,21 +174,13 @@ class Pokemon {
                     
                 }
                 
-                print(self._weight)
-                print(self._height)
-                print(self._attack)
-                print(self._defense)
-                
                 if let types = dict["types"] as? [Dictionary<String, String>] , types.count > 0 {
-                    
-                    // above line of code shows how we dive into the data in the API to extract the "types" dictionary as a key of type String and an object of type String.  In this particular API we are mostly extracting info as arrays inside of dictionaries as you can see by the above []
                     
                     if let name = types[0]["name"] {
                         
                         self._type = name.capitalized
+                        
                     }
-                    
-                    // code below - the for loop - instantiated for Pokemon with more than 1 type
                     
                     if types.count > 1 {
                         
@@ -208,9 +192,6 @@ class Pokemon {
                             }
                         }
                     }
-                    
-                    print(self._type)
-                    // above line prints types to the console
                     
                 } else {
                     
@@ -276,11 +257,7 @@ class Pokemon {
                             }
                         }
                         
-                        print(self.nextEvolutionLevel)
-                        print(self.nextEvolutionName)
-                        print(self.nextEvolutionId)
                     }
-                    
                     
                 }
                 
@@ -293,12 +270,6 @@ class Pokemon {
         
         
     }
-    
-    
-    
-    
-    
-    
     
     
 }
